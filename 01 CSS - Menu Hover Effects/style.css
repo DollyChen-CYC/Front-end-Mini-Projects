@@ -1,0 +1,92 @@
+@import url('https://fonts.googleapis.com/css2?family=Rampart+One&family=Roboto:wght@400;500;700;900&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Roboto', sans-serif;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+p {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  width: 100vw;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #1c234a;
+}
+
+ul {
+  position: relative;
+}
+
+ul li {
+  list-style: none;
+  margin: 0 20px;
+  font-size: 3em;
+}
+
+ul li i {
+  position: relative;
+  font-size: 0.5em;
+  top: -7px;
+  left: -10px;
+  color: transparent;
+}
+
+ul li:hover i {
+  color: #e27493;
+}
+
+ul li a {
+  position: relative;
+  color: rgba(255, 255, 255, 0.1);
+  text-decoration: none;
+  font-weight: 500;
+}
+
+ul li a:before {
+  content: attr(data-text);
+  position: absolute;
+  top: 0;
+  overflow-y: hidden;
+  color: #1bfead;
+  white-space: nowrap;
+  overflow: hidden;
+}
+
+ul:hover li a:before {
+  animation: animate-1 0.5s steps(10) forwards;
+}
+
+@keyframes animate-1 {
+  0% {
+    width: 276.391px;
+  }
+  100% {
+    width: 0px;
+  }
+}
+
+ul li:hover a:before {
+  animation: animate-2 2s steps(10) forwards;
+}
+
+@keyframes animate-2 {
+  0% {
+    width: 0px;
+  }
+  100% {
+    width: 276.391px;
+  }
+}
